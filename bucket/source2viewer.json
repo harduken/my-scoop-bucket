@@ -1,0 +1,42 @@
+{
+    "version": "10.1",
+    "description": "Valve's Source 2 resource file format parser, decompiler, and exporter.",
+    "homepage": "https://valveresourceformat.github.io/",
+    "license": {
+        "identifier": "MIT license",
+        "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/10.2/Source2Viewer.exe",
+            "hash": ""
+        }
+    },
+    "bin": "Source2Viewer.exe",
+    "shortcuts": [["Source2Viewer.exe", "Source 2 Viewer"]],
+    "persist": ["Source2Viewer"],
+    "post_install": [
+        "if (!(Test-Path \"$persist_dir\\Source2Viewer\")) {",
+        "    New-Item -ItemType Directory \"$persist_dir\\Source2Viewer\"",
+        "}",
+        "Copy-Item \"$dir\\AppData\\Local\\Source2Viewer\\*\" \"$persist_dir\\Source2Viewer\" -Recurse"
+    ],
+    "uninstaller": {
+        "script": [
+            "'2Ship2Harkinian.json' | ForEach-Object {",
+            "   Copy-Item -Force \"$dir\\$_\" \"$persist_dir\\$_.bak\"",
+            "}"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/ValveResourceFormat/ValveResourceFormat/tags",
+        "regex": "releases/tag/(.+?)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/$version/Source2Viewer.exe"
+            }
+        }
+    }
+}
