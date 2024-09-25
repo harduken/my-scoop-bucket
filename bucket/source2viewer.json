@@ -23,7 +23,7 @@
     ],
     "uninstaller": {
         "script": [
-            "'2Ship2Harkinian.json' | ForEach-Object {",
+            "'source2viewer.json' | ForEach-Object {",
             "   Copy-Item -Force \"$dir\\$_\" \"$persist_dir\\$_.bak\"",
             "}"
         ]
