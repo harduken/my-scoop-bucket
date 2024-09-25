@@ -1,53 +1,53 @@
 {
-  "version": "1.0.2",
-  "description": "Majora's Mask PC Port",
-  "homepage": "https://github.com/HarbourMasters/2ship2harkinian/",
-  "license": "CC0-1.0 license",
-  "notes": [
-    "ATTENTION: 2 Ship 2 Harkinian requires specific n64 rom(s) of MM to function.",
-    "Place the rom(s) in $persist_dir.",
-    "Learn more at http://ship.equipment"
-  ],
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/1.0.2/2Ship-Rika-Charlie-Win64.zip",
-      "hash": "706f152abd38d1d3ea1c733601d65b5ac69bc519dab112b170d3fc83b1446ec9"
-    }
-  },
-  "pre_install": [
-    "if (!(Test-Path \"$persist_dir\\2Ship2Harkinian.json\")) {",
-    "    New-Item -ItemType File -ErrorAction SilentlyContinue \"$dir\\2Ship2Harkinian.json\" | Out-Null",
-    "}"
-  ],
-  "post_install": [
-    "'2Ship2Harkinian.json' | ForEach-Object {",
-    "   if (Test-Path \"$persist_dir\\$_.bak\") {",
-    "       Copy-Item -Force \"$persist_dir\\$_.bak\" \"$dir\\$_\"",
-    "   } else {",
-    "       New-Item -ErrorAction SilentlyContinue -ItemType File \"$dir\\$_\" | Out-Null",
-    "   }",
-    "}"
-  ],
-  "bin": "2ship.exe",
-  "shortcuts": [["2ship.exe", "2 Ship 2 Harkinian [win][mm]"]],
-  "persist": ["mods", "saves", "2Ship2Harkinian.json"],
-  "uninstaller": {
-    "script": [
-      "'2Ship2Harkinian.json' | ForEach-Object {",
-      "   Copy-Item -Force \"$dir\\$_\" \"$persist_dir\\$_.bak\"",
-      "}"
-    ]
-  },
-  "checkver": {
-    "github": "https://github.com/HarbourMasters/2ship2harkinian/",
-    "regex": "(?<majorName>(\\w+))\\s(?<minorName>(\\w+))\\s(?<version>([\\d\\.]+))",
-    "replace": "${version}"
-  },
-  "autoupdate": {
+    "version": "1.0.2",
+    "description": "Majora's Mask PC Port",
+    "homepage": "https://github.com/HarbourMasters/2ship2harkinian/",
+    "license": "CC0-1.0 license",
+    "notes": [
+        "ATTENTION: 2 Ship 2 Harkinian requires specific n64 rom(s) of MM to function.",
+        "Place the rom(s) in $persist_dir.",
+        "Learn more at http://ship.equipment"
+    ],
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/$version/2ship-$matchMajorname-$matchMinorname-Win64.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/1.0.2/2Ship-Rika-Charlie-Win64.zip",
+            "hash": "6afd8d8fd54d1a511d9a324bcf811295934b9801059c06579d9ee51a08360b4d"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\2Ship2Harkinian.json\")) {",
+        "    New-Item -ItemType File -ErrorAction SilentlyContinue \"$dir\\2Ship2Harkinian.json\" | Out-Null",
+        "}"
+    ],
+    "post_install": [
+        "'2Ship2Harkinian.json' | ForEach-Object {",
+        "   if (Test-Path \"$persist_dir\\$_.bak\") {",
+        "       Copy-Item -Force \"$persist_dir\\$_.bak\" \"$dir\\$_\"",
+        "   } else {",
+        "       New-Item -ErrorAction SilentlyContinue -ItemType File \"$dir\\$_\" | Out-Null",
+        "   }",
+        "}"
+    ],
+    "bin": "2ship.exe",
+    "shortcuts": [["2ship.exe", "2 Ship 2 Harkinian [win][mm]"]],
+    "persist": ["mods", "saves", "2Ship2Harkinian.json"],
+    "uninstaller": {
+        "script": [
+            "'2Ship2Harkinian.json' | ForEach-Object {",
+            "   Copy-Item -Force \"$dir\\$_\" \"$persist_dir\\$_.bak\"",
+            "}"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/HarbourMasters/2ship2harkinian/",
+        "regex": "(?<majorName>(\\w+))\\s(?<minorName>(\\w+))\\s(?<version>([\\d\\.]+))",
+        "replace": "${version}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/$version/2ship-$matchMajorname-$matchMinorname-Win64.zip"
+            }
+        }
     }
-  }
 }
