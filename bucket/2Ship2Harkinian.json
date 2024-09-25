@@ -46,7 +46,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/$version/2ship-$matchMajorname-$matchMinorname-Win64.zip"
+                "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/$version/2Ship-$matchMajorname-$matchMinorname-Win64.zip"
             }
         }
     }
