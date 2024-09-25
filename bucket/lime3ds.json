@@ -1,0 +1,42 @@
+{
+    "version": "2109",
+    "description": "Lime3DS is an open-source, easy-to-use Nintendo 3DS emulator, forked from Lime3DS. Lime has many features, such as firmware emulation, amiibo loading, and partial support for homebrew applications.",
+    "homepage": "https://lime3ds.github.io/",
+    "license": {
+        "identifier": "GPL-2.0",
+        "url": "https://github.com/Lime3DS/Lime3DS/blob/master/license.txt"
+    },
+    "url": "https://github.com/Lime3DS/Lime3DS/releases/download/2109/lime3ds-2109-windows-msvc.zip",
+    "hash": "17ee4a756b2498f36e6e0fb3abea5d208bc40c69cbc4aed3a26be31a32a05e89",
+    "extract_dir": "lime3ds-(?<build>[\\d]+)-windows-msvc",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\user\")) {",
+        "   New-Item -Path \"$persist_dir\" -Name \"user\" -ItemType \"directory\" | Out-Null",
+        "   if (Test-Path \"$env:APPDATA\\Lime3DS\") {",
+        "       Write-host \"Migrating AppData...\" -ForegroundColor green",
+        "       Copy-Item -Path \"$env:APPDATA\\Lime3DS\\*\" -Destination \"$persist_dir\\user\" -Recurse",
+        "       Remove-Item -Path \"$env:APPDATA\\Lime3DS\" -Recurse",
+        "   }",
+        "}"
+    ],
+    "bin": [
+        "lime.exe",
+        "lime-qt.exe",
+        "lime-room.exe"
+    ],
+    "shortcuts": [
+        [
+            "lime-qt.exe",
+            "Lime3DS"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://github.com/Lime3DS/Lime3DS",
+        "regex": "download/lime3ds-(?<build>[\\d]+)-windows-msvc.(?<zip>7z|zip)",
+        "replace": "${build}-${date}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Lime3DS/Lime3DS/releases/download/lime3ds-$matchBuild-windows-msvc.$matchZip"
+    }
+}

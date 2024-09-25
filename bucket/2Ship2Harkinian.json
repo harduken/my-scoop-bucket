@@ -1,0 +1,24 @@
+{
+    "version": "1.0.1",
+    "description": "Majora's Mask PC Port",
+    "homepage": "https://github.com/HarbourMasters/2ship2harkinian/",
+    "license": "CC0-1.0 license",
+    "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/1.0.1/2Ship-Rika-Bravo-Win64.zip",
+    "hash": "621226b572dcaa91d44e36450f82fcf28fce052dff5770d50b3f628987f59291",
+    "extract_dir": "2Ship2Harkinian",
+    "shortcuts": [
+        [
+            "2ship.exe",
+            "2Ship2Harkinian (Majora's Mask PC Port)"
+        ]
+    ],
+    "persist": "mods",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Sophia-Community/SophiApp/releases/download/$version/2Ship-Rika-Bravo-Win64.zip",
+        "hash": {
+            "url": "https://github.com/HarbourMasters/2ship2harkinian/releases",
+            "find": "<code>$sha256</code>"
+        }
+    }
+}
