@@ -6,6 +6,9 @@
         "identifier": "MIT license",
         "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/blob/master/LICENSE"
     },
+    "notes": [
+        "Source 2 Viewer keeps its settings in %LocalAppData%/Source2Viewer/settings.vdf."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/10.2/Source2Viewer.exe",
