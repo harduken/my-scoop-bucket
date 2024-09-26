@@ -1,0 +1,22 @@
+{
+    "version": "1.666",
+    "description": "Makes sure Shadowplay's Instant Replay feature is on.",
+    "homepage": "https://github.com/Verpous/AlwaysShadow",
+    "license": "GPL-3.0 license",
+    "url": "https://github.com/Verpous/AlwaysShadow/releases/download/AlwaysShadow.zip",
+    "hash": "92bc583bb702fac50a49d59752ec897a445b541089d7fabbf352bc44dac2fc1b",
+    "bin": "AlwaysShadow.exe",
+    "shortcuts": [["AlwaysShadow.exe", "Always Shadow"]],
+    "persist": ["AlwaysShadow"],
+    "checkver": {
+        "github": "https://github.com/Verpous/AlwaysShadow/tags",
+        "regex": "releases/tag/(.+?)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Verpous/AlwaysShadow/releases/download/$version/AlwaysShadow.zip"
+            }
+        }
+    }
+}
