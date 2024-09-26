@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/10.2/Source2Viewer.exe",
-            "hash": ""
+            "hash": "2df456c6e370bcc92d88e9e95c5ff31a1c49048c7abcff81e6638997107d99ff"
         }
     },
     "bin": "Source2Viewer.exe",
