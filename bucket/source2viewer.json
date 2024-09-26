@@ -1,5 +1,5 @@
 {
-    "version": "10.1",
+    "version": "10.2",
     "description": "Valve's Source 2 resource file format parser, decompiler, and exporter.",
     "homepage": "https://valveresourceformat.github.io/",
     "license": {
@@ -15,12 +15,6 @@
     "bin": "Source2Viewer.exe",
     "shortcuts": [["Source2Viewer.exe", "Source 2 Viewer"]],
     "persist": ["Source2Viewer"],
-    "post_install": [
-        "if (!(Test-Path \"$persist_dir\\Source2Viewer\")) {",
-        "    New-Item -ItemType Directory \"$persist_dir\\Source2Viewer\"",
-        "}",
-        "Copy-Item \"$dir\\AppData\\Local\\Source2Viewer\\*\" \"$persist_dir\\Source2Viewer\" -Recurse"
-    ],
     "uninstaller": {
         "script": [
             "'source2viewer.json' | ForEach-Object {",
