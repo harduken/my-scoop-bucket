@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-115.15.0-bb32-build2.de-DE.win64.zip",
-            "hash": "6361437300e9593dd117fac3af44c871d4572401950e607e29315fe360be27ba"
+            "hash": ""
         }
     },
     "shortcuts": [["BetterbirdLauncher.exe", "Betterbird [(]de-DE]"]],
