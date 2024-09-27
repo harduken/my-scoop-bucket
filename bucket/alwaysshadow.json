@@ -5,7 +5,7 @@
     "license": "GPL-3.0 license",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Verpous/AlwaysShadow/releases/download/AlwaysShadow.zip",
+            "url": "https://github.com/Verpous/AlwaysShadow/releases/download/v1.666/AlwaysShadow.zip",
             "hash": "c9b5e6e917497bb8a9d0792646945e94a6a8f56334c87e8f1f4608167b748aeb"
         }
     },
