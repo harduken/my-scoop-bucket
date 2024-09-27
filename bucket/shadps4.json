@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.3.0/shadps4-win64-qt-0.3.0.zip",
-            "hash": "5dcec90992b1325868d6bd75ff4506d52f5c969ba235aa9ab336ff6c764ed51e"
+            "hash": "c9b5e6e917497bb8a9d0792646945e94a6a8f56334c87e8f1f4608167b748aeb"
         }
     },
     "shortcuts": [["shadPS4.exe", "shadPS4"]],
@@ -18,7 +18,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/shadps4-emu/shadPS4/releases/download/$matchPrefix$version/shadps4-win64-qt.zip"
+                "url": "https://github.com/shadps4-emu/shadPS4/releases/download/$matchPrefix$version/shadps4-win64-qt-$version.zip"
             }
         }
     }
