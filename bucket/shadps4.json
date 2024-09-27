@@ -5,7 +5,7 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.3.0/shadps4-win64-qt.zip",
+            "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.3.0/shadps4-win64-qt-0.3.0.zip",
             "hash": "5dcec90992b1325868d6bd75ff4506d52f5c969ba235aa9ab336ff6c764ed51e"
         }
     },
