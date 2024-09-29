@@ -15,6 +15,13 @@
             "hash": "2df456c6e370bcc92d88e9e95c5ff31a1c49048c7abcff81e6638997107d99ff"
         }
     },
+    "post_install": [
+        "ensure \"$persist_dir\\appdata\" | Out-Null",
+        "if (Test-Path \"$env:LOCALAPPDATA\\Source2Viewer\") {",
+        "   Move-Item \"$env:LOCALAPPDATA\\Source2Viewer\\*\" \"$persist_dir\\appdata\"",
+        "}",
+        "New-Item -Type Junction -Path \"$env:LOCALAPPDATA\\Source2Viewer\" -Target \"$persist_dir\\appdata\" | Out-Null"
+    ],
     "bin": "Source2Viewer.exe",
     "shortcuts": [["Source2Viewer.exe", "Source 2 Viewer"]],
     "persist": ["Source2Viewer"],
@@ -25,10 +32,8 @@
             "}"
         ]
     },
-    "checkver": {
-        "github": "https://github.com/ValveResourceFormat/ValveResourceFormat/tags",
-        "regex": "releases/tag/(.+?)\""
-    },
+    "post_uninstall": "Remove-Item \"$env:LOCALAPPDATA\\Source2Viewer\"",
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
