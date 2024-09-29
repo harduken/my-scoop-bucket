@@ -1,0 +1,23 @@
+{
+    "version": "3.0",
+    "description": "App that will record system audio and send it off to the Shazam API to be identified. For when your phone's microphone just can't quite capture the song well enough for Shazam to figure it out.",
+    "homepage": "https://github.com/zemoto/WhatAmIHearing/",
+    "license": "MIT license",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zemoto/WhatAmIHearing/releases/download/3.0/WhatAmIHearing.zip",
+            "hash": "6afd8d8fd54d1a511d9a324bcf811295934b9801059c06579d9ee51a08360b4d"
+        }
+    },
+    "bin": "WhatAmIHearing.exe",
+    "shortcuts": [["WhatAmIHearing.exe", "What Am I Hearing"]],
+    "persist": ["config.json"],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zemoto/WhatAmIHearing/releases/download/$version/WhatAmIHearing.zip"
+            }
+        }
+    }
+}
