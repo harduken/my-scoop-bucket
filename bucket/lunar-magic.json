@@ -1,0 +1,18 @@
+{
+    "version": "3.50",
+    "description": "Super Mario World Level Editor",
+    "homepage": "http://fusoya.eludevisibility.org",
+    "license": "Freeware",
+    "notes": "Lunar Magic requires either the American or Japanese version 1.0 Super Mario World SNES ROM, or the American version 1.0 Mario All Stars + World SNES ROM. Even if you have a level saved to your hard drive, Lunar Magic must still first open up the ROM each time the program is run to access information needed for level rendering.",
+    "url": "https://fusoya.eludevisibility.org/lm/download/lm350.zip",
+    "hash": "a3766ca6befb85bef74f03527ce71ed92ddb75ac0ebaf35a55cdaa06ac2fe19f",
+    "bin": "Lunar Magic.exe",
+    "shortcuts": [["Lunar Magic.exe", "Lunar Magic"]],
+    "checkver": {
+        "url": "http://fusoya.eludevisibility.org/lm/program.html",
+        "regex": "Version: ([\\d\\.]+)"
+    },
+    "autoupdate": {
+        "url": "http://fusoya.eludevisibility.org/lm/download/lm$cleanVersion.zip"
+    }
+}
