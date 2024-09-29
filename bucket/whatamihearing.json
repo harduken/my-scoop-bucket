@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/zemoto/WhatAmIHearing/releases/download/3.0/WhatAmIHearing.zip",
-            "hash": "6afd8d8fd54d1a511d9a324bcf811295934b9801059c06579d9ee51a08360b4d"
+            "hash": "470d56f8e7a941544e6b2e20a97a7bd2f83d1e79208d21b9a4f0dedbc1a1cfae"
         }
     },
     "bin": "WhatAmIHearing.exe",
