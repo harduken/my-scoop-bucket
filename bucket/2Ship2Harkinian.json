@@ -5,8 +5,7 @@
     "license": "CC0-1.0 license",
     "notes": [
         "ATTENTION: 2 Ship 2 Harkinian requires specific n64 rom(s) of MM to function.",
-        "Place the rom(s) in $persist_dir.",
-        "Learn more at http://ship.equipment"
+        "Place the rom(s) in $persist_dir."
     ],
     "architecture": {
         "64bit": {
