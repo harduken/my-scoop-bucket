@@ -16,9 +16,9 @@
         }
     },
     "post_install": [
-        "ensure \"$persist_dir\\appdata\" | Out-Null",
+        "ensure \"$persist_dir\\Source2Viewer\" | Out-Null",
         "if (Test-Path \"$env:LOCALAPPDATA\\Source2Viewer\") {",
-        "   Move-Item \"$env:LOCALAPPDATA\\Source2Viewer\\*\" \"$persist_dir\\appdata\"",
+        "   Move-Item \"$env:LOCALAPPDATA\\Source2Viewer\\*\" \"$persist_dir\\Source2Viewer\"",
         "}",
         "New-Item -Type Junction -Path \"$env:LOCALAPPDATA\\Source2Viewer\" -Target \"$persist_dir\\appdata\" | Out-Null"
     ],
