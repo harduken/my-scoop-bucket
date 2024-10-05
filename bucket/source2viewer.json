@@ -32,7 +32,6 @@
             "}"
         ]
     },
-    "post_uninstall": "Remove-Item \"$env:LOCALAPPDATA\\Source2Viewer\"",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
