@@ -20,7 +20,7 @@
         "if (Test-Path \"$env:LOCALAPPDATA\\Source2Viewer\") {",
         "   Move-Item \"$env:LOCALAPPDATA\\Source2Viewer\\*\" \"$persist_dir\\Source2Viewer\"",
         "}",
-        "New-Item -Type Junction -Path \"$env:LOCALAPPDATA\\Source2Viewer\" -Target \"$persist_dir\\appdata\" | Out-Null"
+        "New-Item -Type Junction -Path \"$env:LOCALAPPDATA\\Source2Viewer\" -Target \"$persist_dir\\Source2Viewer\" | Out-Null"
     ],
     "bin": "Source2Viewer.exe",
     "shortcuts": [["Source2Viewer.exe", "Source 2 Viewer"]],
