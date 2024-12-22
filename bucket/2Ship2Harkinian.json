@@ -1,5 +1,5 @@
 {
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "A PC port of Legend of Zelda: Majora's Mask",
     "homepage": "https://www.shipofharkinian.com",
     "license": "CC0-1.0",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/1.1.1/2Ship-Satoko-Bravo-Win64.zip",
-            "hash": "b69debd8e294186144e96446a5b98b252bea6433cf6408eb0b2b8d36b5db3abb"
+            "url": "https://github.com/HarbourMasters/2ship2harkinian/releases/download/1.1.2/2Ship-Satoko-Bravo-Win64.zip",
+            "hash": "7BC9415F4C633F32D5135D95A40D9D66E484A39A72A9C9833B1E04FB798C3435"
         }
     },
     "pre_install": [
