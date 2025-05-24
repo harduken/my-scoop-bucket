@@ -1,13 +1,13 @@
 {
-    "version": "20240406-0c2f076",
+    "version": "20240928-r608383e",
     "description": "Emulator for Nintendo 3DS, capable of playing many of your favorite games",
     "homepage": "https://citra-emu.org/",
     "license": {
         "identifier": "GPL-2.0",
         "url": "https://github.com/PabloMK7/citra/blob/master/license.txt"
     },
-    "url": "https://github.com/PabloMK7/citra/releases/download/r0c2f076/citra-windows-msvc-20240406-0c2f076.7z",
-    "hash": "d5006282f376334cefbb86fef3b3ae076739eb508666c8c874a4f0b7b3ef9b7f",
+    "url": "https://github.com/PabloMK7/citra/releases/download/r608383e/citra-windows-msvc-20240927-608383e.7z",
+    "hash": "5a9ec3a1c7d1e7efb24e98c9bc30167fd4fa1ed65980b039966a008e02bac2d6",
     "extract_dir": "head",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\user\")) {",
