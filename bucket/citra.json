@@ -1,0 +1,42 @@
+{
+    "version": "20240406-0c2f076",
+    "description": "Emulator for Nintendo 3DS, capable of playing many of your favorite games",
+    "homepage": "https://citra-emu.org/",
+    "license": {
+        "identifier": "GPL-2.0",
+        "url": "https://github.com/PabloMK7/citra/blob/master/license.txt"
+    },
+    "url": "https://github.com/PabloMK7/citra/releases/download/r0c2f076/citra-windows-msvc-20240406-0c2f076.7z",
+    "hash": "d5006282f376334cefbb86fef3b3ae076739eb508666c8c874a4f0b7b3ef9b7f",
+    "extract_dir": "head",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\user\")) {",
+        "   New-Item -Path \"$persist_dir\" -Name \"user\" -ItemType \"directory\" | Out-Null",
+        "   if (Test-Path \"$env:APPDATA\\Citra\") {",
+        "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
+        "       Copy-Item -Path \"$env:APPDATA\\Citra\\*\" -Destination \"$persist_dir\\user\" -Recurse",
+        "       Remove-Item -Path \"$env:APPDATA\\Citra\" -Recurse",
+        "   }",
+        "}"
+    ],
+    "bin": [
+        "citra.exe",
+        "citra-qt.exe",
+        "citra-room.exe"
+    ],
+    "shortcuts": [
+        [
+            "citra-qt.exe",
+            "Citra (PabloMK7 fork)"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://github.com/PabloMK7/citra",
+        "regex": "download/(?<build>[\\d]+)/citra-windows-(?<env>[\\w]+)-(?<date>[\\d]+)-(?<commit>[\\da-f]{7})\\.(?<zip>7z|zip)",
+        "replace": "${build}-${date}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/PabloMK7/citra/releases/download/nightly-$matchBuild/citra-windows-$matchEnv-$matchDate-$matchCommit.$match7z"
+    }
+}
