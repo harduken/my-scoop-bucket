@@ -11,16 +11,15 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/13.0/Source2Viewer.exe",
-            "hash": "7ebcc91a220cd5cb7c6c495f3f06f9191e67440cd60c0af05efa6b1089be03b3"
+            "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/14.1/Source2Viewer.exe",
+            "hash": "ba7a666813089e839d2d559f2ff7c9d3dbee403a5a0dfd8a53524e38d7532115"
         }
     },
     "post_install": [
-        "ensure \"$persist_dir\\Source2Viewer\" | Out-Null",
-        "if (Test-Path \"$env:LOCALAPPDATA\\Source2Viewer\") {",
-        "   Move-Item \"$env:LOCALAPPDATA\\Source2Viewer\\*\" \"$persist_dir\\Source2Viewer\"",
-        "}",
-        "New-Item -Type Junction -Path \"$env:LOCALAPPDATA\\Source2Viewer\" -Target \"$persist_dir\\Source2Viewer\" | Out-Null"
+        "if (!(Test-Path \"$persist_dir\\Source2Viewer\") -and (Test-Path \"$env:USERPROFILE\\Source2Viewer\")) {",
+        "    info \"Moving configs to persist directory...\"",
+        "    Copy-Item -Path \"$env:USERPROFILE\\Source2Viewer\\*\" -Destination \"$persist_dir\\Source2Viewer\" -Force -Recurse | Out-Null",
+        "}"
     ],
     "bin": "Source2Viewer.exe",
     "shortcuts": [["Source2Viewer.exe", "Source 2 Viewer"]],
