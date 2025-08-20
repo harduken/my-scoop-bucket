@@ -1,5 +1,5 @@
 {
-    "version": "13.0",
+    "version": "14.1",
     "description": "Valve's Source 2 resource file format parser, decompiler, and exporter.",
     "homepage": "https://valveresourceformat.github.io/",
     "license": {
