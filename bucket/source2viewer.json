@@ -1,5 +1,5 @@
 {
-    "version": "14.1",
+    "version": "15",
     "description": "Valve's Source 2 resource file format parser, decompiler, and exporter.",
     "homepage": "https://valveresourceformat.github.io/",
     "license": {
@@ -11,8 +11,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/14.1/Source2Viewer.exe",
-            "hash": "ba7a666813089e839d2d559f2ff7c9d3dbee403a5a0dfd8a53524e38d7532115"
+            "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/15/Source2Viewer.exe",
+            "hash": "2853a32083c27b146458b16ed31dee5ce5b3b26ff8b7343a956ec4ad76f36ff0"
         }
     },
     "post_install": [
