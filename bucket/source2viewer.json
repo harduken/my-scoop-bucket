@@ -31,11 +31,16 @@
             "}"
         ]
     },
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/ValveResourceFormat/ValveResourceFormat"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/$version/Source2Viewer.exe"
+                "url": "https://github.com/ValveResourceFormat/ValveResourceFormat/releases/download/$version/Source2Viewer.exe",
+                "hash": {
+                    "url": "$url.sha256"
+                }
             }
         }
     }
