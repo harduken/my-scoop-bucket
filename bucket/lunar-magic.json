@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://fusoya.eludevisibility.org/lm/download/lm$cleanVersion-1.zip"
+                "url": "https://fusoya.eludevisibility.org/lm/download/lm$cleanVersion.zip"
             }
         }
     }
