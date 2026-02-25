@@ -13,7 +13,8 @@
     "notes": "Run AlwaysShadow.exe. The program will make sure to turn Instant Replay back on should it ever turn off. Additionally, there is a system tray icon with options, including running at startup (recommended). For this program to work, turn on In-Game Overlay in your GeForce Experience settings. Some programs (such as Netflix) prevent Instant Replay from being active; you can whitelist such programs by creating a Whitelist.txt next to the executable and adding one process command line per line. See the project README for advanced whitelisting options.",
     "shortcuts": [["AlwaysShadow.exe", "Always Shadow"]],
     "persist": [
-        "AlwaysShadow"
+        "AlwaysShadow",
+        "Whitelist.txt"
     ],
     "post_install": [
         "$dataDir = Join-Path $persist_dir 'AlwaysShadow'",
